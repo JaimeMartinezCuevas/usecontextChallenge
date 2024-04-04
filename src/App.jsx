@@ -7,9 +7,12 @@ import RoutesApp from './routes/RoutesApp';
 const App = () => {
   return (
   <>
+  <div className="App dark">
+
   <ThemeProvider>
     <RoutesApp />
   </ThemeProvider>
+  </div>
   </>
   );
 };
