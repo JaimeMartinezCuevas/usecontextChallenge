@@ -1,3 +1,13 @@
 #root {
   text-align: center;
 }
+
+.light .App {
+  background-color: white;
+  color: black;
+}
+
+.dark .App {
+  background-color: #242424;
+  color: #ccc;
+}
