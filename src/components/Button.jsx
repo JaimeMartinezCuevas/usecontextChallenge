@@ -1,16 +1,8 @@
-import React from 'react';
-import { useTheme } from '../themes/ThemeContext';
+import { useTheme } from '../themes/ThemeContext.jsx'
 
 const Button = () => {
-  const { toggleTheme } = useTheme();
+  const { toggleTheme } = useTheme()
+  return <button onClick={toggleTheme}>Cambia el tema</button>
+}
 
-  return (
-    <>
-    <button onClick={toggleTheme}>
-      Toggle Theme
-    </button>
-    </>
-  );
-};
-
-export default Button;
+export default Button

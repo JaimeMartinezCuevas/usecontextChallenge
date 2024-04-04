@@ -1,13 +1,9 @@
-import React from 'react';
-import Button from '../components/Button';
-
-const MyJob = () => {
+function MyJob () {
   return (
-    <div>
-      <h1>This is the MyJob Page</h1>
-      <Button />
-    </div>
-  );
-};
+    <>
+    <h1>Esta es la MyJob</h1>
+    </>
+  )
+}
 
-export default MyJob;
+export default MyJob

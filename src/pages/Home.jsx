@@ -1,13 +1,9 @@
-import React from 'react';
-import Button from '../components/Button';
-
-const Home = () => {
+function Home () {
   return (
-    <div>
-      <h1>This is the Home Page</h1>
-      <Button />
-    </div>
-  );
-};
+    <>
+    <h1>Esta es la home</h1>
+    </>
+  )
+}
 
-export default Home;
+export default Home

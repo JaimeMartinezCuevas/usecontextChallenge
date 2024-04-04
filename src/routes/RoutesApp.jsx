@@ -1,35 +1,31 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from '../pages/Home';
-import Profile from '../pages/Profile';
-import MyJob from '../pages/MyJob';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useTheme } from '../themes/ThemeContext.jsx';
+import Home from '../pages/Home.jsx'
+import Profile from '../pages/Profile.jsx'
+import MyJob from '../pages/MyJob.jsx'
+import Button from '../components/Button.jsx';
+import { Template } from '../components/Template.jsx';
 
-const RoutesApp = () => {
+
+function RoutesApp () {
+  const {theme} = useTheme()
+  
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/profile">Profile</Link>
-            </li>
-            <li>
-              <Link to="/myjob">MyJob</Link>
-            </li>
-          </ul>
-        </nav>
-
+      <section className={`App ${theme}`}>
+        <div className="content">
+          <Template>
+            <Button />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/myjob" element={<MyJob />} />
+          <Route path='/' element={<Home />}></Route>
+          <Route path='/profile' element={<Profile />}></Route>
+          <Route path='/myjob' element={<MyJob />}></Route>
         </Routes>
-      </div>
+          </Template>
+        </div>
+      </section>
     </Router>
-  );
-};
+  )
+} 
 
-export default RoutesApp;
+export default RoutesApp
